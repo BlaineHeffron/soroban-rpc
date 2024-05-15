@@ -93,7 +93,7 @@ pub enum Error {
     UnexpectedContractCodeDataType(LedgerEntryData),
     #[error("unexpected contract instance type: {0:?}")]
     UnexpectedContractInstance(xdr::ScVal),
-    #[error("unexpected contract code got token")]
+    #[error("unexpected contract code got token: {0:?}")]
     UnexpectedToken(ContractDataEntry),
     #[error("Fee was too large {0}")]
     LargeFee(u64),
