@@ -90,7 +90,7 @@ pub enum Error {
     UnsupportedOperationType,
     #[error("unexpected contract code data type: {0:?}")]
     UnexpectedContractCodeDataType(LedgerEntryData),
-    #[error("unexpected contract code got token")]
+    #[error("unexpected contract code got token: {0:?}")]
     UnexpectedToken(ContractDataEntry),
     #[error(transparent)]
     Spec(#[from] soroban_spec::read::FromWasmError),
